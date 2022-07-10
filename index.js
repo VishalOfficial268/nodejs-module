@@ -1,9 +1,15 @@
 const http = require('http');
+const __fs = require('./fs.js');
 const PORT = 8001;
 const HOST = 'localhost';
 
+
 //creating server:
 const server = http.createServer((req, res) => {
+
+    //calling here and functions are defined in fs file:
+    __fs.readTheFileData(req, res);
+    // __fs.streamTheData(req, res);
 
 });
 
